@@ -1,0 +1,131 @@
+import sys
+
+
+print("User Current Version:-", sys.version)
+# Python3 code to demonstrate
+# Getting current date and time using
+# now().
+	
+# importing datetime module for now()
+import datetime
+	
+# using now() to get current time
+current_time = datetime.datetime.now()
+	
+# Printing value of now.
+print ("Time now at greenwich meridian is : "
+									, end = "")
+print (current_time)
+# define a function for calculating
+# the area of a shapes
+def calculate_area(name):\
+
+# converting all characters
+# into lower cases
+name = name.lower()
+
+# check for the conditions
+if name == "rectangle":
+	l = int(input("Enter rectangle's length: "))
+	b = int(input("Enter rectangle's breadth: "))
+	
+	# calculate area of rectangle
+	rect_area = l * b
+	print(f"The area of rectangle is
+		{rect_area}.")
+
+elif name == "square":
+	s = int(input("Enter square's side length: "))
+	
+	# calculate area of square
+	sqt_area = s * s
+	print(f"The area of square is
+		{sqt_area}.")
+
+elif name == "triangle":
+	h = int(input("Enter triangle's height length: "))
+	b = int(input("Enter triangle's breadth length: "))
+	
+	# calculate area of triangle
+	tri_area = 0.5 * b * h
+	print(f"The area of triangle is
+		{tri_area}.")
+
+elif name == "circle":
+	r = int(input("Enter circle's radius length: "))
+	pi = 3.14
+		
+	# calculate area of circle
+	circ_area = pi * r * r
+	print(f"The area of triangle is
+		{circ_area}.")
+		
+elif name == 'parallelogram':
+	b = int(input("Enter parallelogram's base length: "))
+	h = int(input("Enter parallelogram's height length: "))
+	
+	# calculate area of parallelogram
+	para_area = b * h
+	print(f"The area of parallelogram is
+		{para_area}.")
+	
+else:
+	print("Sorry! This shape is not available")
+
+# driver code
+if __name__ == "__main__" :
+
+print("Calculate Shape Area")
+shape_name = input("Enter the name of shape whose area you want to find: ")
+
+# function calling
+calculate_area(shape_name)
+# python program to print initials of a name
+def name(s):
+
+	# split the string into a list
+	l = s.split()
+	new = ""
+
+	# traverse in the list
+	for i in range(len(l)-1):
+		s = l[i]
+		
+		# adds the capital first character
+		new += (s[0].upper()+'.')
+		
+	# l[-1] gives last item of list l. We
+	# use title to print first character in
+	# capital.
+	new += l[-1].title()
+	
+	return new
+	
+# Driver code			
+s =" humna anees"
+print(name(s))		
+# Python program showing how to
+# multiple input using split
+
+# taking two inputs at a time
+x, y = input("Enter two values: ").split()
+print("Number of boys: ", x)
+print("Number of girls: ", y)
+print()
+
+# taking three inputs at a time
+x, y, z = input("Enter three values: ").split()
+print("Total number of students: ", x)
+print("Number of boys is : ", y)
+print("Number of girls is : ", z)
+print()
+
+# taking two inputs at a time
+a, b = input("Enter two values: ").split()
+print("First number is {} and second number is {}".format(a, b))
+print()
+
+# taking multiple inputs at a time
+# and type casting using list() function
+x = list(map(int, input("Enter multiple values: ").split()))
+print("List of students: ", x)
